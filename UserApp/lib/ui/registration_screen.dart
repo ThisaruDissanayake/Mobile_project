@@ -262,7 +262,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         SizedBox(
                           height: 50.h,
                         ),
-                        // elevated button
+                       
                         SizedBox(
                           width: 1.sw,
                           height: 56.h,

@@ -51,7 +51,7 @@ class _UserFormState extends State<UserForm> {
       "gender": _genderController.text,
       "age": _ageController.text,
     }).then((value) {
-      // Show a success Flushbar message for successful data saving
+      
       Flushbar(
         message: "Save User Details",
         duration: Duration(seconds: 3),
@@ -67,7 +67,7 @@ class _UserFormState extends State<UserForm> {
             CupertinoPageRoute(builder: (_) => BottomNavController()),
           );
         }).catchError((error) {
-          // Show an error Flushbar message
+         
           FlushbarHelper.createError(
             message: "Something is wrong. $error",
             duration: Duration(seconds: 3),

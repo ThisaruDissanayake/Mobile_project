@@ -36,14 +36,14 @@ class _ProductDetailsState extends State<ProductDetails> {
       "url": widget._product["url"],
     });
 
-    // Show toast message
+    
   Flushbar(
   message: "Item added to cart",
   duration: Duration(seconds: 2),
   backgroundColor: Colors.green,
   flushbarPosition: FlushbarPosition.BOTTOM,
   flushbarStyle: FlushbarStyle.GROUNDED,
-  borderRadius: BorderRadius.circular(10),  // Use BorderRadius.circular for borderRadius
+  borderRadius: BorderRadius.circular(10),  
   margin: EdgeInsets.all(8),
   animationDuration: Duration(milliseconds: 500),
 ).show(context);
@@ -65,11 +65,11 @@ class _ProductDetailsState extends State<ProductDetails> {
     "url": widget._product["url"],
   });
 
-  // Show toast message
+  
   Flushbar(
     message: "Item added to favorites",
     duration: Duration(seconds: 2),
-    backgroundColor: Colors.blue, // Customize color as needed
+    backgroundColor: Colors.blue, 
     flushbarPosition: FlushbarPosition.BOTTOM,
     flushbarStyle: FlushbarStyle.GROUNDED,
     borderRadius: BorderRadius.circular(10),
@@ -180,10 +180,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 widget._product['brand'],
                 style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
               ),
-              // Text(
-              //   widget._product['usertype'],
-              //   style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
-              // ),
+              
               
               Text(widget._product['description']),
               SizedBox(

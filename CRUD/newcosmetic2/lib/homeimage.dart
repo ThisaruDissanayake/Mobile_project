@@ -109,15 +109,7 @@ class _HomeImageScreenState extends State<HomeImageScreen> {
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 trailing:
-                                // IconButton(
-                                //   icon: Icon(
-                                //     Icons.delete,
-                                //     color: Colors.red[900],
-                                //   ),
-                                //   onPressed: () {
-                                //     carousel.doc(Iproduct['key']).delete();
-                                //   },
-                                // ),
+                               
 
                                 IconButton(
                                           icon: Icon(

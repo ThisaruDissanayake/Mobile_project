@@ -59,7 +59,7 @@ class _CartState extends State<CheakoutPage> {
     CollectionReference costomeroder =
         FirebaseFirestore.instance.collection("costomer_oders");
 
-    // Check if cartItems is not null before proceeding
+    
     if (widget.cartItems == null || widget.cartItems!.isEmpty) {
       // Handle the case where there are no items in the cart
       print("Error: Cart is empty");
@@ -79,10 +79,10 @@ class _CartState extends State<CheakoutPage> {
       return;
     }
 
-    // Calculate the total cost
+    
     double totalCost = calculateTotalCost();
 
-    // Create a document for the order in the Final_Cheakoutoders collection
+    
     DocumentReference orderDocRef = await finalOrderCollection
         .doc(currentUser.email)
         .collection("FinalorderItems")
@@ -92,11 +92,11 @@ class _CartState extends State<CheakoutPage> {
       "orderdate": _dobController.text,
       "delivermethod": _genderController.text,
       "address": _ageController.text,
-      "totalCost": totalCost, // Add the total cost to the document
+      "totalCost": totalCost,
       "timestamp": FieldValue.serverTimestamp(),
       "cartItems": widget.cartItems,
 
-      // Add a timestamp for ordering
+      
     });
 
     DocumentReference orderDocRef2 = await costomeroder
@@ -108,14 +108,14 @@ class _CartState extends State<CheakoutPage> {
       "orderdate": _dobController.text,
       "delivermethod": _genderController.text,
       "address": _ageController.text,
-      "totalCost": totalCost, // Add the total cost to the document
+      "totalCost": totalCost,
       "timestamp": FieldValue.serverTimestamp(),
       "cartItems": widget.cartItems,
 
-      // Add a timestamp for ordering
+      
     });
 
-    // Remove the items from the user's cart after placing the order
+    
     await FirebaseFirestore.instance
         .collection("users-cart-items")
         .doc(currentUser.email)
@@ -131,14 +131,14 @@ class _CartState extends State<CheakoutPage> {
     Flushbar(
       message: "Saving data, CONFIRMED ORDER",
       duration: Duration(seconds: 2),
-      backgroundColor: Colors.green, // Customize color as needed
+      backgroundColor: Colors.green,
       flushbarPosition: FlushbarPosition.BOTTOM,
       flushbarStyle: FlushbarStyle.GROUNDED,
       borderRadius: BorderRadius.circular(10),
       margin: EdgeInsets.all(8),
       animationDuration: Duration(milliseconds: 500),
     )..show(context).then((_) {
-        // Navigate to BottomNavController after processing message
+        
         Navigator.push(
           context,
           MaterialPageRoute(builder: (_) => BottomNavController()),
@@ -148,7 +148,7 @@ class _CartState extends State<CheakoutPage> {
 
   double calculateTotalCost() {
     if (widget.cartItems == null || widget.cartItems!.isEmpty) {
-      return 0.0; // Return 0 if the cart is empty
+      return 0.0;
     }
 
     double totalCost = 0.0;
@@ -163,7 +163,7 @@ class _CartState extends State<CheakoutPage> {
           totalCost += price;
         } catch (e) {
           print("Error parsing price: $e");
-          // Handle the error as needed
+          
         }
       }
     }
@@ -176,7 +176,7 @@ class _CartState extends State<CheakoutPage> {
     var currentUser = _auth.currentUser;
 
     if (currentUser == null) {
-      // Handle the case where the user is not authenticated
+      
       print("Error: User not authenticated");
       return [];
     }
@@ -198,7 +198,7 @@ class _CartState extends State<CheakoutPage> {
   @override
   void initState() {
     super.initState();
-    // Fetch cart items when the widget is initialized
+    
     fetchCartItems().then((items) {
       setState(() {
         widget.cartItems = items.cast<Map<String, dynamic>>();
@@ -302,7 +302,7 @@ class _CartState extends State<CheakoutPage> {
                 height: 25.h,
               ),
 
-              // elevated button
+              
               customButton("Confirm Order", () => addFinalOrder()),
               Text(
                 "If You want to remove items, Go back to cart",

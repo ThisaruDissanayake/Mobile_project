@@ -92,12 +92,7 @@ class _AdminOrderScreenState extends State<AdminOrderScreen> {
                               )
                           .toList();
             
-                // return ListView.builder(
-                //   itemCount: snapshot.data!.docs.length,
-                //   itemBuilder: (context, index) {
-                //     DocumentSnapshot orderDocument = snapshot.data!.docs[index];
-                //     Map<String, dynamic> orderData =
-                //         orderDocument.data() as Map<String, dynamic>;
+             
 
                            return ListView.builder(
                                                 itemCount: filteredProducts.length,

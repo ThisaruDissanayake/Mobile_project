@@ -85,7 +85,7 @@ class _HomeState extends State<Home> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius:
-                      BorderRadius.circular(8.0), // Adjust the radius as needed
+                      BorderRadius.circular(8.0),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.white.withOpacity(0.1),
@@ -112,7 +112,7 @@ class _HomeState extends State<Home> {
       borderRadius: BorderRadius.all(Radius.circular(20)),
       borderSide: BorderSide(color: Colors.grey),
     ),
-    // Add more decorations as needed
+    
   ),
   onTap: () => Navigator.push(context, CupertinoPageRoute(builder: (_) => SearchScreen())),
 ),
@@ -191,11 +191,11 @@ class _HomeState extends State<Home> {
                                 decoration: BoxDecoration(
                                   color: Color.fromARGB(255, 208, 89, 232),
                                   borderRadius: BorderRadius.circular(
-                                      15.0), // Set the border radius
+                                      15.0),
                                   boxShadow: [
                                     BoxShadow(
                                       color: Colors.black.withOpacity(
-                                          0.3), // Set shadow color and opacity
+                                          0.3),
                                       spreadRadius: 2,
                                       blurRadius: 4,
                                       offset: Offset(0, 3),
@@ -204,7 +204,7 @@ class _HomeState extends State<Home> {
                                 ),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(
-                                      15.0), // Clip the image with the same border radius
+                                      15.0),
                                   child: Image.network(
                                     _products[index]["url"],
                                     fit: BoxFit.fitHeight,
@@ -217,7 +217,7 @@ class _HomeState extends State<Home> {
       style: TextStyle(
         fontSize: 18,
         fontWeight: FontWeight.bold,
-        color: Colors.black, // Set your desired text color
+        color: Colors.black, 
       ),
     ),
     
@@ -225,14 +225,14 @@ class _HomeState extends State<Home> {
       "${_products[index]["brand"]}",
       style: TextStyle(
         fontSize: 14,
-        color: Colors.grey, // Set your desired text color
+        color: Colors.grey,
       ),
     ),
     Text(
       "${_products[index]["category"]}",
       style: TextStyle(
         fontSize: 14,
-        color: Colors.grey, // Set your desired text color
+        color: Colors.grey,
       ),
     ),
     Text(
@@ -240,7 +240,7 @@ class _HomeState extends State<Home> {
       style: TextStyle(
         fontSize: 18,
         fontWeight: FontWeight.bold,
-        color: Colors.pink[400], // Set your desired text color
+        color: Colors.pink[400],
       ),
     ),
                           ],

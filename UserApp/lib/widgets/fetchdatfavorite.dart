@@ -38,7 +38,7 @@ Widget fetchDatafav (String collectionName){
                 style: TextStyle(fontWeight: FontWeight.bold),),
                 
                 subtitle: Text(
-                  "\$ ${_documentSnapshot['price']}",
+                  "\Rs ${_documentSnapshot['price']}",
                   style: TextStyle(
                       fontWeight: FontWeight.bold, color: Colors.red),
                 ),
@@ -57,7 +57,7 @@ Widget fetchDatafav (String collectionName){
                         Flushbar(
       message: "Item removed from favorites",
       duration: Duration(seconds: 2),
-      backgroundColor: Colors.red, // Customize color as needed
+      backgroundColor: Colors.red, 
       flushbarPosition: FlushbarPosition.BOTTOM,
       flushbarStyle: FlushbarStyle.GROUNDED,
       borderRadius: BorderRadius.circular(10),

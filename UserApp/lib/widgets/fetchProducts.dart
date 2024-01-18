@@ -54,11 +54,11 @@ Widget fetchData (String collectionName){
         .doc(_documentSnapshot.id)
         .delete();
 
-    // Show toast message
+    
     Flushbar(
       message: "Item removed from cart",
       duration: Duration(seconds: 2),
-      backgroundColor: Colors.red, // Customize color as needed
+      backgroundColor: Colors.red, 
       flushbarPosition: FlushbarPosition.BOTTOM,
       flushbarStyle: FlushbarStyle.GROUNDED,
       borderRadius: BorderRadius.circular(10),

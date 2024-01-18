@@ -19,14 +19,14 @@ class _CartState extends State<Cart> {
     Flushbar(
       message: "Processing...",
       duration: Duration(seconds: 2),
-      backgroundColor: Colors.blue, // Customize color as needed
+      backgroundColor: Colors.blue,
       flushbarPosition: FlushbarPosition.BOTTOM,
       flushbarStyle: FlushbarStyle.GROUNDED,
       borderRadius: BorderRadius.circular(10),
       margin: EdgeInsets.all(8),
       animationDuration: Duration(milliseconds: 500),
     )..show(context).then((_) {
-      // Navigate to CheckoutPage after processing message
+      
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => CheakoutPage()),
@@ -41,14 +41,14 @@ class _CartState extends State<Cart> {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/back.png"), // Replace with your actual image path
+              image: AssetImage("assets/back.png"),
               fit: BoxFit.cover,
             ),
           ),
           child: Column(
             children: [
               Container(
-                height: 650, // Set a fixed height or use another value that fits your design
+                height: 630,
                 child: fetchData("users-cart-items"),
               ),
               SizedBox(

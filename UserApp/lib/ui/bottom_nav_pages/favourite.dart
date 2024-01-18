@@ -14,7 +14,7 @@ class _FavouriteState extends State<Favourite> {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/back.png"), // Replace with your image asset path
+              image: AssetImage("assets/back.png"),
               fit: BoxFit.cover,
             ),
           ),

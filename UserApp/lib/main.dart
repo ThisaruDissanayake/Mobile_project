@@ -13,7 +13,7 @@ void main() async {
   
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
-  ); // Wait for Firebase to initialize
+  );
 
    // Initialize Firebase In-App Messaging
   FirebaseInAppMessaging.instance;
@@ -26,7 +26,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -41,14 +41,14 @@ class MyApp extends StatelessWidget {
             ),
             home: SplashScreen(),
             
-            // Define your routes here
+            
             routes: {
               '/login': (context) => LoginScreen(),
-              // Other routes...
+              
             },
             
-            // Set the initial route or home
-            initialRoute: '/', // You can set it to '/login' if you want LoginScreen as the initial screen
+            
+            initialRoute: '/',
           );
         },
       ),

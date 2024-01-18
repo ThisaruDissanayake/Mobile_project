@@ -29,7 +29,7 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
       orderHistory = querySnapshot.docs.map((doc) {
         Map<String, dynamic> orderData = doc.data() as Map<String, dynamic>;
 
-        // Assuming 'cartItems' is a field within each document
+       
         List<Map<String, dynamic>> cartItems = (orderData['cartItems'] as List<dynamic>)
             .map((item) => item as Map<String, dynamic>)
             .toList();
@@ -79,12 +79,12 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
               itemBuilder: (context, index) {
                 Map<String, dynamic> orderData = orderHistory[index];
 
-                // Retrieve cartItems from orderData
+                
                 List<Map<String, dynamic>> cartItems = (orderData['cartItems'] as List<dynamic>)
                     .map((item) => item as Map<String, dynamic>)
                     .toList();
 
-                // Customize the order history item UI according to your needs
+               
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
@@ -101,14 +101,14 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                               Text("Order Date: ${orderData['orderdate']}"),
                               Text("Delivery Method: ${orderData['delivermethod']}"),
                               Text("Address: ${orderData['address']}"),
-                              // Add more details as needed
+                           
                             ],
                           ),
                           
                       
                     
                         ),
-                        // Display cartItems details
+                      
                         for (var item in cartItems)
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,12 +119,12 @@ class _OrderHistoryPageState extends State<OrderHistoryPage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text("Price: ${item['price']}"),
-                                    // Display the image from the URL
+                                   
                                     Image.network(
                                       item['url'],
-                                      height: 100, // Adjust the height as needed
+                                      height: 100, 
                                     ),
-                                    // Add more details as needed
+                                    
                                   ],
                                 ),
                               ),

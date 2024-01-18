@@ -21,7 +21,7 @@ class _ProfileState extends State<Profile> {
     try {
       await FirebaseAuth.instance.signOut();
 
-      // Show a flushbar message for successful logout
+      
       Flushbar(
         message: "Logout Successfully",
         duration: Duration(seconds: 3),
@@ -37,7 +37,7 @@ class _ProfileState extends State<Profile> {
     } catch (error) {
       print("Error signing out: $error");
 
-      // Show a snackbar with an error message
+      
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('Failed to sign out. Please try again.'),
@@ -62,7 +62,7 @@ class _ProfileState extends State<Profile> {
             ),
           ],
         ),
-        SizedBox(height: 15), // Add some space between text fields
+        SizedBox(height: 15), 
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -75,7 +75,7 @@ class _ProfileState extends State<Profile> {
             ),
           ],
         ),
-        SizedBox(height: 15), // Add some space between text fields
+        SizedBox(height: 15), 
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -88,16 +88,16 @@ class _ProfileState extends State<Profile> {
             ),
           ],
         ),
-        SizedBox(height: 40), // Add some space between text fields and the button
+        SizedBox(height: 40), 
         ElevatedButton(
           onPressed: () => updateData(),
           child: Text(
             "Update account details",
-            style: TextStyle(fontSize: 28), // Set the font size
+            style: TextStyle(fontSize: 28), 
           ),
           style: ElevatedButton.styleFrom(
-            primary: AppColors.deep_orange, // Set the button color
-            onPrimary: Colors.white, // Set the text color
+            primary: AppColors.deep_orange, 
+            onPrimary: Colors.white, 
           ),
         ),
       ],
@@ -114,7 +114,7 @@ class _ProfileState extends State<Profile> {
         "age": _ageController.text,
       });
 
-      // Show a flushbar message for successful update
+      
       Flushbar(
         message: "User Details UPDATED",
         duration: Duration(seconds: 3),
@@ -130,7 +130,7 @@ class _ProfileState extends State<Profile> {
     } catch (error) {
       print("Error updating user details: $error");
 
-      // Show a flushbar message for update failure
+      
       Flushbar(
         message: "Failed to update user details. Please try again.",
         duration: Duration(seconds: 3),
@@ -156,7 +156,7 @@ class _ProfileState extends State<Profile> {
       backgroundColor: AppColors.deep_orange,
       child: IconButton(
         onPressed: () {
-          // Navigate to the order history page
+          
           Navigator.push(
             context,
             MaterialPageRoute(builder: (_) => OrderHistoryPage()),
@@ -170,13 +170,13 @@ class _ProfileState extends State<Profile> {
     ),
   ),
   actions: [
-    // Logout button
+    
     Padding(
       padding: const EdgeInsets.all(8.0),
       child: CircleAvatar(
         backgroundColor: AppColors.deep_orange,
         child: IconButton(
-          onPressed: () => signOut(context), // Call the signOut method
+          onPressed: () => signOut(context), 
           icon: Icon(
             Icons.logout,
             color: Colors.white,

@@ -18,7 +18,7 @@ class CustomTheme {
   }
 
   static ThemeData getTheme() {
-    // ignore: unused_local_variable
+  
     Map<String, double> fontSize = {
       "sm": 14,
       "nd": 18,

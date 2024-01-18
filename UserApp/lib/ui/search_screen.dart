@@ -40,7 +40,7 @@ class _SearchScreenState extends State<SearchScreen> {
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/back.png"), // Change the path to your background image
+                image: AssetImage("assets/back.png"), 
                 fit: BoxFit.cover,
               ),
             ),
@@ -100,12 +100,12 @@ class _SearchScreenState extends State<SearchScreen> {
                                 title: Text(data['name']),
                                 leading: Image.network(data['url']),
                                 onTap: () {
-                                  // Navigate to product details page
+                               
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                       builder: (_) => ProductDetails(
-                                          data), // Pass data to the product details screen
+                                          data),
                                     ),
                                   );
                                 },

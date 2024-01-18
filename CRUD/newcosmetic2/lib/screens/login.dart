@@ -48,11 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
     // Show success message
     showSuccessSnackBar("Login successful");
 
-    // Navigate to another screen if needed
-    // Navigator.push(
-    //   context,
-    //   MaterialPageRoute(builder: (context) => NextScreen()),
-    // );
+    
   }
 
   void signupError(FirebaseAuthException e) {
@@ -155,67 +151,6 @@ Widget build(BuildContext context) {
   );
 }
 
-  // @override
-  // Widget build(BuildContext context) {
-  //   return Scaffold(
-  //     resizeToAvoidBottomInset: false,
-  //     body: Container(
-  //       decoration: const BoxDecoration(
-  //         image: DecorationImage(
-  //           image: AssetImage('assets/t.jpg'),
-  //           fit: BoxFit.cover,
-  //         ),
-  //       ),
-  //       child: SafeArea(
-  //         child: Column(
-  //           crossAxisAlignment: CrossAxisAlignment.start,
-  //           mainAxisAlignment: MainAxisAlignment.center,
-  //           children: [
-  //             Padding(
-  //               padding: const EdgeInsets.only(left: 40.0, bottom: 30, top: 70),
-  //               child: Column(
-  //                 crossAxisAlignment: CrossAxisAlignment.start,
-  //                 mainAxisAlignment: MainAxisAlignment.end,
-  //                 children: [
-  //                   Padding(
-  //                     padding: const EdgeInsets.only(bottom: 10),
-  //                     child: Text(
-  //                       data["heading"]!,
-  //                       style: Theme.of(context).textTheme.headlineLarge,
-  //                     ),
-  //                   ),
-  //                   Text(
-  //                     data["subHeading"]!,
-  //                     style: Theme.of(context).textTheme.bodySmall,
-  //                   ),
-  //                 ],
-  //               ),
-  //             ),
-  //             model(data, _emailController, _passwordController),
-  //             Padding(
-  //               padding: const EdgeInsets.all(20.0),
-  //               child: Row(
-  //                 mainAxisAlignment: MainAxisAlignment.center,
-  //                 children: [
-  //                   GestureDetector(
-  //                     onTap: switchLogin,
-  //                     child: SizedBox(
-  //                       height: 50,
-  //                       child: Text(
-  //                         data["footer"]!,
-  //                         style: Theme.of(context).textTheme.bodyLarge,
-  //                       ),
-  //                     ),
-  //                   ),
-  //                 ],
-  //               ),
-  //             ),
-  //           ],
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
 
   Widget model(Map<String, String> data, TextEditingController emailController,
       TextEditingController passwordController) {
